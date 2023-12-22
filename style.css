@@ -154,30 +154,29 @@ section {
 .about{
    min-height: 100vh;
 }
-.aboutcontent{
-   display: flex;
-   color: var(--text-color);
-}
-.aboutcontent .theaphoto{
+.about .theaphoto{
    width: 25rem;
 }
 
-.aboutcontent .statement{
-   font-size: 1.9rem;
-   margin-left: 3%;
-}
-.aboutcontent .statement span{
-   font-weight: bolder;
-   color: var(--hover-color);
-   font-size: 2rem;
+.aboutcontent{
+   margin-top: 3rem;
+   display: flex;
 }
 
-.about .row1, .row2{
+.aboutcontent2{
+   align-items: center;
+   background: rgba(139, 139, 139, 0.1);
+   padding: 0 3% 0 3% ;
    display: flex;
-   font-size: 1.9rem;
-   text-align: center;
    justify-content: space-between;
-   margin: 3rem 5rem 0rem 5rem;
+}
+
+.about .row1 p, .row2 p{
+   font-size: 1.7rem;
+   margin: 2rem 0;
+}
+.about .row2 p{
+   text-align: right;
 }
 
 .about .row1 span, .row2 span{
@@ -185,9 +184,16 @@ section {
    font-size: 2rem;
    font-weight: bolder;
 }
-.aboutcontent2{
-   margin-left: 28rem;
+.about .statement{
+   margin-top: 5rem;
+   font-size: 1.8rem;
 }
+.about .statement span{
+   font-weight: bolder;
+   color: var(--hover-color);
+   font-size: 2.2rem;
+}
+
 .projects{
    border: none;
 }
@@ -227,7 +233,6 @@ section {
 }
 .projects .box-container .box .btn:hover{
    letter-spacing: .05rem;
-
 }
 .contact{
    background: var(--hover-color);
@@ -299,29 +304,42 @@ section {
 
 @media (max-width:1100px) {
    html {
-      scroll-padding-top: 8rem;
-   }
-   .about .aboutcontentout{
-      padding: 4rem 0 4rem 0;
-      width: 95%;
-      background: rgba(0, 0, 0, .1);
-      margin: 0 auto;
+      scroll-padding-top: 6.5rem;
    }
    .aboutcontent{
       display: unset;
    }
    .aboutcontent .theaphoto{
       width: 60vw;
-      margin-bottom: 5rem;
+      margin-top: 5rem;
    }
    .aboutcontent .image{
       text-align: center;
    }
    .aboutcontent2{
-      margin-left: 0rem;
+      display: unset;
+      justify-content: unset;      
    }
    .about .row1, .row2{
-      margin: 3rem 0rem;
+      margin-top: 3rem;
+      background: rgba(0, 0, 0, .1);
+      padding: 1rem;
+   }
+   .about .row1 p, .row2 p{
+      font-size: 1.5rem;
+   }
+   .about .row1 p span, .row2 p span{
+      font-size: 1.6rem;
+   }
+   .about .statement{
+      margin-top: 1em;
+      font-size: 1.5rem;
+      padding: 10px;
+      background: rgba(0, 0, 0, .1);
+
+   }
+   .about .statement p span{
+      font-size: 1.8rem;
    }
    .projects .box-container{
       grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
