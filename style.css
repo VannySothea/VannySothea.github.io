@@ -150,10 +150,6 @@ section {
    display: none;
 }
 
-
-.about{
-   min-height: 100vh;
-}
 .about .theaphoto{
    width: 25rem;
 }
@@ -311,7 +307,7 @@ section {
       display: unset;
    }
    .aboutcontent .theaphoto{
-      width: 60vw;
+      width: 35rem;
       margin-top: 5rem;
    }
    .aboutcontent .image{
