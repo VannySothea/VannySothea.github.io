@@ -306,8 +306,11 @@ section {
    .aboutcontent{
       display: unset;
    }
+   .about{
+   min-height: 100vh;
+   }
    .aboutcontent .theaphoto{
-      width: 35rem;
+      width: 60vw;
       margin-top: 5rem;
    }
    .aboutcontent .image{
