@@ -1,463 +1,1325 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+/* font style */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
 
-:root {
-   --text-color: rgb(236, 240, 241);
-   --hover-color: rgb(192, 57, 43);
-   --link: rgb(59, 157, 255);
-   --bg: rgb(35, 35, 35);
-   --border: .1rem solid rgb(189, 195, 199);
+:root{
+  --p-color: rgb(100, 100, 100);
+  --text-color: rgb(35, 35, 35);
+  --hover-color: rgb(225, 104, 77);
+  --bg-color: rgb(250, 250, 250);
 }
-
-* {
-   font-family: 'Roboto', sans-serif;
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   outline: none;
-   border: none;
-   text-decoration: none;
-   transition: .2s linear;
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  margin: 0; padding: 0;
+  transition: .2s linear;
 }
 
 html {
-   font-size: 62.5%;
-   overflow-x: hidden;
-   scroll-padding-top: 6rem;
-   scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
-   width: .8rem;
+  width: .8rem;
 }
 
 html::-webkit-scrollbar-track {
-   background: transparent;
+  background: transparent;
 }
 
 html::-webkit-scrollbar-thumb {
-   background: var(--text-color);
-   border-radius: 5rem;
+  background: var(--text-color);
+  border-radius: 5rem;
 }
 
-body {
-   color: var(--text-color);
-   background: var(--bg);
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+section{
+  margin: 0 6rem;
 }
 
-section {
-   padding: 2rem 3%;
-   border-bottom: var(--border);
-
+h1.heading{
+  margin-top: 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 2rem;
 }
 
-
-.heading{
-   text-align: center;
-   color: var(--text-color);
-   text-transform: uppercase;
-   padding-bottom: 1rem;
-   font-size: 4rem;
+#menu-btn{
+  cursor: pointer;
 }
 
-.header {
-   width: 100vw;
-   background: rgba(14, 14, 14,.8);   
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding: .5rem 3%;
-   border-bottom: var(--border);
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   z-index: 1000;
+/* header */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4.5rem 1rem 4rem;
 }
-.header:hover{
-   background: var(--bg);
+.header img{
+  width: 40px;
+}
+.header nav a{
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 1rem;
+  color: var(--text-color);
+  font-weight: bolder;
+}
+.header nav a:hover{
+  color: var(--p-color);
+}
+.header .icons{
+  font-size: 1.5rem;
+}
+/* home */
+
+.home{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home img{
+  width: 30rem;
+  padding: 3rem 0;
+  color: var(--text-color);
+}
+.home h1{
+  font-size: 6rem;
+  line-height: 6rem;
+}
+.home a.btn{
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-decoration: none;
+  font-weight: bolder;
+  color: var(--text-color);
+  padding: .25rem 2rem;
+  border: 4px solid var(--text-color);
+}
+.home a.btn:hover{
+  margin-left: -.2rem;
+  padding: .25rem 2.2rem;
 }
 
-.header .logo img {
-   height: 4.5rem;
-   border: var(--border);
-   border-radius: 100%;
-}
-
-.header .navbar a {
-   margin: 0 1rem;
-   font-size: 1.6rem;
-   color: var(--text-color);
-   text-transform: uppercase;
-   font-weight: bolder;
-}
-
-.header .navbar a:hover {
-   color: var(--hover-color);
-   border-bottom: .1rem solid var(--hover-color);
-   padding-bottom: .5rem;
-}
-.home {
-   min-height: 100vh;
-   display: flex;
-   align-items: center;
-   background: linear-gradient(rgba(0, 0, 0, 1), rgba(14, 14, 14, .2), rgba(0, 0, 0, 1)), url(/Thea_Photos/nissan\ gtr\ desktop\ wallpaper.jpg) center/cover no-repeat;
-}
-
-.home .content {
-   max-width: 60rem;
-}
-
-.home .content h3 {
-   font-size: 6rem;
-   text-transform: uppercase;
-   color: var(--text-color);
-}
-
-.home .content p {
-   font-size: 2rem;
-   font-weight: lighter;
-   line-height: 1.8;
-   padding: 1rem 0;
-   color: var(--text-color);
-}
-
-.btn {
-   margin-top: 1rem;
-   display: inline-block;
-   padding: .9rem 3rem;
-   font-size: 1.7rem;
-   color: var(--text-color);
-   background: var(--hover-color);
-   cursor: pointer;
-}
-
-.btn:hover {
-   letter-spacing: .2rem;
-}
-
-.header .icons div {
-   color: var(--text-color);
-   cursor: pointer;
-   font-size: 2.5rem;
-   margin-left: 2rem;
-}
-
-.header .icons div:hover {
-   color: var(--hover-color);
-}
-
-.icons{
-   display: none;
-}
-
-.about .theaphoto{
-   width: 25rem;
-}
-
+/* about me */
 .aboutcontent{
-   margin-top: 3rem;
-   display: flex;
+  display: flex;
+  margin-bottom: 5rem;
+  align-items: center;
 }
-
+.aboutcontent img{
+  width: 20rem;
+  box-shadow: var(--bg-color) -20px 20px 0px -4px, var(--text-color) -20px 20px;
+}
+.aboutcontent .infomation{
+  margin-right: 5rem;
+}
+.aboutcontent .intro{
+  font-size: 1.4rem;
+}
+.aboutcontent .intro span{
+  font-weight: bolder;
+}
+.aboutcontent .paragraph{
+  color: var(--p-color);
+  font-size: 1.1rem;
+}
 .aboutcontent2{
-   align-items: center;
-   width: 100vw;
-   background: rgba(139, 139, 139, 0.1);
-   padding: 0 3% 0 3% ;
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: center;
+  margin: 0 1.5rem;
+  align-items: center;
+}
+.aboutcontent2 img{
+  width: 20rem;
+}
+.aboutcontent2 .container{
+  margin-left: 2rem;
+}
+.aboutcontent2 .intro{
+  line-height: 3rem;
+}
+.aboutcontent2 .name{
+  font-size: 3rem;
+  font-weight: bolder;
+}
+.aboutcontent2 .description{
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: rgb(0, 123, 255);
+}
+.aboutcontent2 .infomation{
+  display: flex;
+  font-size: 1.3rem;
+  color: var(--p-color);
+  align-items: center;
+}
+.aboutcontent2 .infomation .column1{
+  font-weight: lighter;
 }
 
-.about .row1 p, .row2 p{
-   font-size: 1.7rem;
-   margin: 2rem 0;
+.aboutcontent2 .infomation span{
+  font-size: 1.5rem;
+  color: var(--text-color);
 }
-.about .row2 p{
-   text-align: right;
+.aboutcontent2 .column2{
+  line-height: 2.5rem;
+  font-size: 1.4rem;
+  margin-left: 2.5rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--p-color);
 }
-
-.about .row1 span, .row2 span{
-   color: var(--hover-color);
-   font-size: 2rem;
-   font-weight: bolder;
-}
-.about .statement{
-   margin-top: 5rem;
-   font-size: 1.8rem;
-}
-.about .statement span{
-   font-weight: bolder;
-   color: var(--hover-color);
-   font-size: 2.2rem;
+.aboutcontent2 .column2 .title{
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: bolder;
 }
 
-.projects{
-   border: none;
-}
-.projects .box-container{
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-   gap:1.5rem;
+.aboutcontent2 .column2{
+  font-weight: bolder;
 }
 
-.projects .box-container .box{
-   padding: 10rem 0 14rem 0;
-   text-align: center;
-   border: var(--border);    
+.aboutcontent2 .column2 .payme{
+  font-size: 1rem;
+  color: var(--hover-color);
+  text-transform: 
+  uppercase;
+}
+/* skills */
+
+.skills .container{
+  display: flex;
+  justify-content: center;
 }
 
-.projects .box-container .box img{
-   height: 10rem; width: 10rem;
-   border-radius: 100%;
+.skills .title{
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
 
-.projects .box-container .box h3{
-   font-size: 2rem;
-   padding: 1rem 0;
+.skills .description{
+  font-size: 1rem;
+  color: var(--p-color);
 }
 
-.projects .box-container .box .information{
-   font-size: 1.5rem;
-   padding:.5rem 0;
+.skills .box{
+  margin: 1rem 1rem;
+  width: 15rem;
 }
 
-.projects .box-container .box:hover{
-   background: rgba(14, 14, 14, .9);
+.skills .box img{
+  width: 5rem;
+  margin: 5rem;
 }
 
-.projects .box-container .box .btn{
-   border-radius: 25px;
+.skills .box .bgimage1{
+  width: fit-content;
+  border-radius: 25px;
+  background: rgb(42, 64, 105);
 }
-.projects .box-container .box .btn:hover{
-   letter-spacing: .05rem;
+.skills .box .bgimage2{
+  width: fit-content;
+  border-radius: 25px;
+  background: rgb(255, 200, 0);
+
 }
+.skills .box .bgimage3{
+  width: fit-content;
+  border-radius: 25px;
+  background: rgb(125, 125, 125);
+}
+
+/* project section */
+
+
+.project .container .row{
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  background: rgba(125, 125, 125,.1);
+}
+
+
+.project .container .row img{
+  width: 180px;
+  margin-bottom: -6px;
+}
+
+.project .container .row .infomation{
+  position: relative;
+  padding: 2rem 1rem;
+}
+
+.project .container .row .infomation .name{
+  top: 0; left: 1rem;
+  position: absolute;
+  font-size: 20px;
+  font-weight: bolder;
+  color: var(--text-color);
+}
+
+.project .container .row .infomation .description{
+  font-size: 18px;
+  color: var(--p-color);
+}
+
+.project .container .row .infomation span{
+  font-weight: bolder;
+}
+
+.project .container .row .infomation .link{
+  text-align: right;
+  position: absolute;
+  bottom: 0; right: 1rem;
+}
+
+.project .container .row .infomation .link a{
+  text-align: center;
+  text-decoration: none;
+  width: 2.2rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  font-size: 18px;
+  color: var(--text-color);
+  border-radius: 50%;
+  border: 1px solid var(--text-color);
+  margin: 2px;
+
+}
+
+.project .container .row .infomation .link a:hover{
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Contact section */
+
 .contact{
-   background: var(--hover-color);
-   text-align: center;
-   padding-bottom: 3rem;
+  padding: 1px 6rem 3rem 6rem;
+  margin: 0;
+  margin-top: 3rem;
+  background: rgba(125, 125, 125,.1);
+  text-align: center;
 }
 
 .contact .share{
-   padding:1rem 0;
-   margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .contact .share a{
-   height: 5rem;
-   width: 5rem;
-   line-height: 5rem;
-   font-size: 2rem;
-   color: var(--text-color);
-   border:var(--border);
-   margin:.3rem;
-   border-radius: 50%;
+  text-decoration: none;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  font-size: 20px;
+  color: var(--text-color);
+  border: var(--text-color);
+  border-radius: 50%;
 }
 
 .contact .share a:hover{
-   background-color: var(--bg);
+  background-color: var(--text-color);
+  color: var(--bg-color);
 }
 
 .contact .share1{
-   display: flex;
-   justify-content: space-between;
-   margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
 }
 
 .contact .share1 p{
-   font-size: 1.5rem;
-   color: var(--text-color);
-   /* margin-left: 10px; */
-   justify-content: space-between;
+  font-size: 18px;
+  color: var(--text-color);
+  justify-content: space-between;
 }
 .contact .share1 p span{
-   font-size: 1.5rem;
-   color: var(--text-color);
-   font-weight: bolder;
+  font-size: 22px;
+  color: var(--text-color);
+  font-weight: bolder;
 }
 .contact .share1 .intouch{
-   text-align: left;
-   display: flex;
+  text-align: left;
+  display: flex;
 }
 .contact .share1 .intouch #icon{
-   margin-right: 10px;
+  margin: 0 10px;
+  cursor: pointer;
 }
 
 .btn2 {
-   padding: .9rem 3rem;
-   font-size: 1.5rem;
-   color: var(--text-color);
-   border: 2px solid var(--text-color);
+  text-decoration: none;
+  padding: .5rem 2rem;
+  font-size: 20px;
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
 }
 
 .btn2:hover {
-   letter-spacing: .1rem;
+  color: var(--bg-color);
+  background: var(--text-color);
+}
+
+.footer{
+  text-align: center;
+  margin: 0;
+  background: var(--text-color);
+}
+.footer p{
+  color: var(--bg-color);
+  font-size: 16px;
 }
 
 
 
 
 
-/* media queries  */
 
-@media (max-width:1100px) {
-   html {
-      scroll-padding-top: 7.5rem;
-   }
-   .aboutcontent{
-      display: unset;
-   }
-   .about{
-   min-height: 100vh;
-   }
-   .aboutcontent .theaphoto{
-      width: 60vw;
-      margin-top: 5rem;
-   }
-   .aboutcontent .image{
-      text-align: center;
-   }
-   .aboutcontent2{
-      display: unset;
-      justify-content: unset;      
-   }
-   .about .row1, .row2{
-      margin-top: 3rem;
-      background: rgba(0, 0, 0, .1);
-      padding: 1rem;
-   }
-   .about .row1 p, .row2 p{
-      font-size: 1.5rem;
-   }
-   .about .row1 p span, .row2 p span{
-      font-size: 1.6rem;
-   }
-   .about .statement{
-      margin-top: 1em;
-      font-size: 1.5rem;
-      padding: 10px;
-      background: rgba(0, 0, 0, .1);
 
-   }
-   .about .statement p span{
-      font-size: 1.8rem;
-   }
-   .projects .box-container{
-      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-   }
-   .projects .box-container .box{
-      padding: 5rem 0;
-      border-radius: 10px;
-   }
-   .projects .box-container .box img{
-      height: 5rem; width: 5rem;
-      border-radius: 100%;
-   }
-   .projects .box-container .box h3{
-      font-size: 1.5rem;
-   }
-   
-   .projects .box-container .box .information{
-      font-size: 1rem;
-   }
 
-   .projects .box-container .box .btn{
-      font-size: 1rem;
-      padding:.5rem 1rem;
-      margin-top: 3rem;      
-   }
 
-   .contact .share{
-      margin-bottom: 1rem;
-   }
 
-   .contact .share a{
-      height: 3rem;
-      width: 3rem;
-      line-height: 3rem;
-      font-size: 1.5rem;
-   }
 
-   .contact .share1{
-      margin-bottom: 2rem;
-   }
 
-   .contact .share1 p{
-      font-size: 1rem;
-   }
 
-   .contact .share1 p span{
-      font-size: 1.25rem;
-   }
-   
-   .contact .share1 .intouch #icon{
-      margin-right: 2.5px;
-   }
-   
-   .btn2 {
-      padding: .45rem 1.5rem;
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-   }
+
+
+  
+
+
+/* screen responsive */
+
+@media (max-width: 1280px) {
+
+  section{
+    margin: 0 2rem;
+  }
+  
+  h1.heading{
+    margin-top: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* home */
+  
+  .home img{
+    width: 25rem;
+  }
+  
+  /* about me */
+  .aboutcontent{
+    margin-bottom: 5rem;
+  }
+
+  .aboutcontent img{
+    width: 17rem;
+  }
+
+  .aboutcontent .infomation{
+    margin-right: 2rem;
+  }
+
+  .aboutcontent .intro{
+    font-size: 16px;
+  }
+
+  .aboutcontent .paragraph{
+    font-size: 13px;
+  }
+
+  .aboutcontent2 img{
+    width: 16rem;
+  }
+  .aboutcontent2 .container{
+    margin-left: .5rem;
+  }
+  .aboutcontent2 .intro{
+    line-height: 2.5rem;
+  }
+  .aboutcontent2 .name{
+    font-size: 2.5rem;
+  }
+  .aboutcontent2 .description{
+    font-size: .9rem;
+  }
+  .aboutcontent2 .infomation{
+    font-size: 1.1rem;
+  }
+
+  .aboutcontent2 .infomation span{
+    font-size: 1.3rem;
+  }
+  .aboutcontent2 .column2{
+    line-height: 2rem;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    padding-left: .5rem;
+  }
+  .aboutcontent2 .column2 .title{
+    font-size: 1.5rem;
+  }
+  
+  .aboutcontent2 .column2 .payme{
+    font-size: .85rem;
+  }
+  /* skills */
+    
+  .skills .title{
+    font-size: 1.4rem;
+  }
+  
+  .skills .description{
+    font-size: 16px;
+  }
+  
+  .skills .box{
+    margin: 1rem 1rem;
+    width: 15rem;
+  }
+  
+  .skills .box img{
+    width: 5rem;
+  }  
+  /* project section */
+  
+  .project .container .row{
+    margin: 2rem 0;
+  }
+  
+  
+  .project .container .row img{
+    width: 180px;
+  }
+  
+  .project .container .row .infomation{
+    padding: 2rem 1rem;
+  }
+  
+  .project .container .row .infomation .name{
+    font-size: 18px;
+  }
+  
+  .project .container .row .infomation .description{
+    font-size: 13px;
+  }
+      
+  .project .container .row .infomation .link a{
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 16px;
+  
+  }
+    
+  /* Contact section */
+  
+  .contact{
+    padding: 1px 4rem 3rem 4rem;
+  }
+  
+  .contact .share{
+    margin-bottom: 1rem;
+  }
+  
+  .contact .share a{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 20px;
+  }
+  
+  .contact .share1{
+    margin-bottom: 3rem;
+  }
+  
+  .contact .share1 p{
+    font-size: 18px;
+  }
+
+  .contact .share1 p span{
+    font-size: 22px;
+  }
+
+  .contact .share1 .intouch #icon{
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .btn2 {
+    padding: .4rem 1.9rem;
+    font-size: 16px;
+  }
+    
+  .footer{
+    margin: 0;
+  }
+  .footer p{
+    font-size: 14px;
+  }
 }
 
-@media (max-width:991px) {
 
-   html {
-      font-size: 55%;
-   }
 
-   .header {
-      padding: 1.5rem 2rem;
-   }
-   section {
-      padding: 2rem;
-   }
 
+
+
+
+@media (max-width: 1024px) {
+  section{
+    margin: 0 1rem;
+  }
+  
+  h1.heading{
+    margin-top: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* home */
+
+  .home h1{
+    font-size: 4.5rem;
+    line-height: 6rem;
+  }
+  .home a.btn{
+    font-size: 1rem;
+    padding: .12.5rem 1rem;
+    border: 1px solid var(--text-color);
+  }
+  
+  .home img{
+    width: 20rem;
+  }
+  
+  /* about me */
+  .aboutcontent{
+    margin-bottom: 5rem;
+  }
+
+  .aboutcontent img{
+    width: 14rem;
+  }
+
+  .aboutcontent .infomation{
+    margin-right: 2rem;
+  }
+
+  .aboutcontent .intro{
+    font-size: 16px;
+  }
+
+  .aboutcontent .paragraph{
+    font-size: 13px;
+  }
+
+  .aboutcontent2 img{
+    width: 14rem;
+  }
+  .aboutcontent2 .container{
+    margin-left: .5rem;
+  }
+  .aboutcontent2 .intro{
+    line-height: 2.5rem;
+  }
+  .aboutcontent2 .name{
+    font-size: 2rem;
+  }
+  .aboutcontent2 .description{
+    font-size: .95rem;
+  }
+  .aboutcontent2 .infomation{
+    font-size: 1rem;
+  }
+
+  .aboutcontent2 .infomation span{
+    font-size: 1.1rem;
+  }
+  .aboutcontent2 .column2{
+    line-height: 1.5rem;
+    font-size: .9rem;
+    margin-left: 1rem;
+    padding-left: .25rem;
+  }
+  .aboutcontent2 .column2 .title{
+    font-size: 1.25rem;
+  }
+  
+  .aboutcontent2 .column2 .payme{
+    font-size: .65rem;
+  }
+  /* skills */
+    
+  .skills .title{
+    font-size: 1rem;
+  }
+  
+  .skills .description{
+    font-size: 10px;
+  }
+  
+  .skills .box{
+    margin: 1rem 1rem;
+    width: 9rem;
+  }
+  
+  .skills .box img{
+    width: 3rem;
+    margin: 3rem;
+  }  
+  /* project section */
+  
+  .project .container .row{
+    margin: 2rem 0;
+  }
+  
+  
+  .project .container .row img{
+    width: 140px;
+  }
+  
+  .project .container .row .infomation{
+    padding: 2rem 1rem;
+  }
+  
+  .project .container .row .infomation .name{
+    font-size: 18px;
+  }
+  
+  .project .container .row .infomation .description{
+    font-size: 13px;
+  }
+      
+  .project .container .row .infomation .link a{
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 10px;
+  
+  }
+    
+  /* Contact section */
+  
+  .contact{
+    padding: 1px 4rem 3rem 4rem;
+  }
+  
+  .contact .share{
+    margin-bottom: 1rem;
+  }
+  
+  .contact .share a{
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    font-size: 20px;
+  }
+  
+  .contact .share1{
+    margin-bottom: 3rem;
+  }
+  
+  .contact .share1 p{
+    font-size: 15px;
+  }
+
+  .contact .share1 p span{
+    font-size: 18px;
+  }
+
+  .contact .share1 .intouch #icon{
+    margin: 0 8px;
+    cursor: pointer;
+  }
+  
+  .btn2 {
+    padding: .4rem 1.5rem;
+    font-size: 12px;
+  }
+    
+  .footer{
+    margin: 0;
+  }
+  .footer p{
+    font-size: 12px;
+  }
 }
 
-@media (max-width:768px) {
-   .icons{
-      display: inline-block;
-   }
-   .header .navbar {
-      position: absolute;
-      top: 100%;
-      right: -100%;
-      background: rgba(14, 14, 14, .9);
-      width: 30rem;
-   }
 
-   .header .navbar.active {
-      right: 0;
-   }
 
-   .header .navbar a {
-      color: var(--text-color);
-      display: block;
-      margin: 1.5rem;
-      padding: .5rem;
-      font-size: 2rem;
-   }
 
-   .home {
-      justify-content: center;
-      text-align: center;
-   }
 
-   .home .content h3 {
-      font-size: 4.5rem;
-   }
 
-   .home .content p {
-      font-size: 1.5rem;
-   }
 
+@media (max-width: 768px) {
+  section{
+    margin: 0 1rem;
+  }
+  
+  h1.heading{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  /* header */
+  .header{
+    padding: 1rem 1.5rem 1rem 1rem;
+  }
+  .header img{
+    width: 30px;
+  }
+  .header nav a{
+    font-size: 14px;
+    margin: .5rem;
+  }
+  .header .icons{
+    font-size: 1rem;
+  }
+  /* home */
+
+  .home h1{
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  .home a.btn{
+    font-size: 1rem;
+    padding: .125rem .5rem;
+  }
+  
+  .home img{
+    width: 17.5rem;
+  }
+  
+  /* about me */
+  .aboutcontent{
+    margin-bottom: 5rem;
+  }
+
+  .aboutcontent img{
+    width: 10rem;
+  }
+
+  .aboutcontent .infomation{
+    margin-right: 2rem;
+  }
+
+  .aboutcontent .intro{
+    font-size: 13px;
+  }
+
+  .aboutcontent .paragraph{
+    font-size: 10px;
+  }
+
+  .aboutcontent2 img{
+    width: 11rem;
+  }
+  .aboutcontent2 .container{
+    margin-left: .5rem;
+  }
+  .aboutcontent2 .intro{
+    line-height: 1.5rem;
+  }
+  .aboutcontent2 .name{
+    font-size: 1.5rem;
+  }
+  .aboutcontent2 .description{
+    font-size: .95rem;
+  }
+  .aboutcontent2 .infomation{
+    font-size: .8rem;
+  }
+
+  .aboutcontent2 .infomation span{
+    font-size: .95rem;
+  }
+  .aboutcontent2 .column2{
+    line-height: 1.25rem;
+    font-size: .8rem;
+    padding-left: .25rem;
+  }
+  .aboutcontent2 .column2 .title{
+    font-size: 1rem;
+  }
+  
+  .aboutcontent2 .column2 .payme{
+    font-size: .55rem;
+  }
+  /* skills */
+    
+  .skills .title{
+    font-size: .75rem;
+  }
+  
+  .skills .description{
+    font-size: 9px;
+  }
+  
+  .skills .box{
+    margin: 1rem 1rem;
+    width: 9rem;
+  }
+  
+  .skills .box img{
+    width: 3rem;
+    margin: 3rem;
+  }  
+  /* project section */
+  
+  .project .container .row img{
+    width: 140px;
+  }
+  
+  .project .container .row .infomation{
+    padding: 2rem 1rem;
+  }
+  
+  .project .container .row .infomation .name{
+    font-size: 14px;
+  }
+  
+  .project .container .row .infomation .description{
+    font-size: 10px;
+  }
+      
+  .project .container .row .infomation .link a{
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 10px;
+  
+  }
+    
+  /* Contact section */
+  
+  .contact{
+    padding: 1px 4rem 3rem 4rem;
+  }
+  
+  .contact .share{
+    margin-bottom: 1rem;
+  }
+  
+  .contact .share a{
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    font-size: 15px;
+  }
+  
+  .contact .share1{
+    margin-bottom: 2rem;
+  }
+  
+  .contact .share1 p{
+    font-size: 12px;
+  }
+
+  .contact .share1 p span{
+    font-size: 15px;
+  }
+
+  .contact .share1 .intouch #icon{
+    margin: 0 8px;
+    cursor: pointer;
+  }
+  
+  .btn2 {
+    padding: .2rem 1rem;
+    font-size: 10px;
+  }
+    
+  .footer p{
+    font-size: 10px;
+  }
 }
 
-@media (max-width:450px) {
 
-   html {
-      font-size: 50%;
-   }
 
+
+
+
+
+
+
+@media (max-width: 640px) {
+  section{
+    margin: 0rem;
+  }
+  
+  h1.heading{
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  /* header */
+  .header{
+    padding: 1rem .5rem 1rem 0rem;
+  }
+  .header img{
+    width: 25px;
+  }
+  .header nav a{
+    font-size: 14px;
+    margin: .5rem;
+  }
+  .header .icons{
+    font-size: 16px;
+  }
+  /* home */
+
+  .home h1{
+    font-size: 2.9rem;
+    line-height: 3rem;
+  }
+  .home a.btn{
+    font-size: 1rem;
+    padding: .125rem .5rem;
+  }
+  
+  .home img{
+    width: 12.5rem;
+  }
+  
+  /* about me */
+  .aboutcontent{
+    margin-bottom: 5rem;
+  }
+
+  .aboutcontent img{
+    width: 9rem;
+  }
+
+  .aboutcontent .infomation{
+    margin-right: 2rem;
+  }
+
+  .aboutcontent .intro{
+    font-size: 11px;
+  }
+
+  .aboutcontent .paragraph{
+    font-size: 8px;
+  }
+
+  .aboutcontent2 img{
+    width: 10rem;
+  }
+  .aboutcontent2 .container{
+    margin-left: .5rem;
+  }
+  .aboutcontent2 .intro{
+    line-height: 1rem;
+  }
+  .aboutcontent2 .name{
+    font-size: 1rem;
+  }
+  .aboutcontent2 .description{
+    font-size: .4rem;
+  }
+  .aboutcontent2 .infomation{
+    font-size: .4rem;
+  }
+
+  .aboutcontent2 .infomation span{
+    font-size: .4rem;
+  }
+  .aboutcontent2 .column2{
+    line-height: 1rem;
+    font-size: .4rem;
+    padding-left: .25rem;
+  }
+  .aboutcontent2 .column2 .title{
+    font-size: .85rem;
+  }
+  
+  .aboutcontent2 .column2 .payme{
+    font-size: .3rem;
+  }
+  /* skills */
+    
+  .skills .title{
+    font-size: .5rem;
+  }
+  
+  .skills .description{
+    font-size: 5px;
+  }
+  
+  .skills .box{
+    margin: 1rem 1rem;
+    width: 6rem;
+  }
+  
+  .skills .box img{
+    width: 2rem;
+    margin: 2rem;
+  }  
+  /* project section */
+  
+  .project .container .row img{
+    width: 120px;
+  }
+  
+  .project .container .row .infomation{
+    padding: 2rem 1rem;
+  }
+  
+  .project .container .row .infomation .name{
+    font-size: 9px;
+  }
+  
+  .project .container .row .infomation .description{
+    font-size: 7.25px;
+  }
+      
+  .project .container .row .infomation .link a{
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 10px;
+  
+  }
+    
+  /* Contact section */
+  
+  .contact{
+    padding: 1px 4rem 3rem 4rem;
+  }
+  
+  .contact .share{
+    margin-bottom: 1rem;
+  }
+  
+  .contact .share a{
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    font-size: 15px;
+  }
+  
+  .contact .share1{
+    margin-bottom: 2rem;
+  }
+  
+  .contact .share1 p{
+    font-size: 10px;
+  }
+
+  .contact .share1 p span{
+    font-size: 12px;
+  }
+
+  .contact .share1 .intouch #icon{
+    margin: 0 8px;
+    cursor: pointer;
+  }
+  
+  .btn2 {
+    border: 1px solid var(--p-color);
+    padding: .3rem .8rem;
+    font-size: 10px;
+  }
+    
+  .footer p{
+    font-size: 8px;
+  }
+}
+
+
+
+
+
+@media (max-width: 412px) {
+  section{
+    margin: 0 1rem;
+  }
+  
+  h1.heading{
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  /* header */
+  .header{
+    padding: 1rem .5rem 1rem 0rem;
+  }
+  .header img{
+    width: 21px;
+  }
+  .header nav a{
+    font-size: 11px;
+    margin: .2rem;
+  }
+  .header .icons{
+    font-size: 14px;
+  }
+  /* home */
+
+  .home h1{
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+  .home a.btn{
+    font-size: 1rem;
+    padding: .125rem .5rem;
+  }
+  .home a.btn:hover{
+    padding: .125rem .5rem;
+  }
+  
+  .home img{
+    width: 10rem;
+  }
+  
+  /* about me */
+  .aboutcontent{
+    margin-bottom: 5rem;
+  }
+
+  .aboutcontent img{
+    width: 8rem;
+  }
+
+  .aboutcontent .infomation{
+    margin-right: 2rem;
+  }
+
+  .aboutcontent .intro{
+    font-size: 10px;
+  }
+
+  .aboutcontent .paragraph{
+    font-size: 6px;
+  }
+
+  .aboutcontent2 img{
+    width: 8rem;
+  }
+  .aboutcontent2 .container{
+    margin-left: .5rem;
+  }
+  .aboutcontent2 .intro{
+    line-height: 1rem;
+  }
+  .aboutcontent2 .name{
+    font-size: 1rem;
+  }
+  .aboutcontent2 .description{
+    font-size: .4rem;
+  }
+  .aboutcontent2 .infomation{
+    font-size: .25rem;
+  }
+
+  .aboutcontent2 .infomation span{
+    font-size: .3rem;
+  }
+  .aboutcontent2 .column2{
+    line-height: .7rem;
+    font-size: .3rem;
+    padding-left: .25rem;
+  }
+  .aboutcontent2 .column2 .title{
+    font-size: .85rem;
+  }
+  
+  .aboutcontent2 .column2 .payme{
+    font-size: .2rem;
+  }
+  /* skills */
+    
+  .skills .title{
+    font-size: .5rem;
+  }
+  
+  .skills .description{
+    font-size: 5px;
+  }
+  
+  .skills .box{
+    margin: 1rem 1rem;
+    width: 6rem;
+  }
+  
+  .skills .box img{
+    width: 2rem;
+    margin: 2rem;
+  }  
+  /* project section */
+  
+  .project .container .row img{
+    width: 120px;
+  }
+  
+  .project .container .row .infomation{
+    padding: 2rem 1rem;
+  }
+  
+  .project .container .row .infomation .name{
+    font-size: 9px;
+  }
+  
+  .project .container .row .infomation .description{
+    font-size: 7.25px;
+  }
+      
+  .project .container .row .infomation .link a{
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 10px;
+  
+  }
+    
+  /* Contact section */
+  
+  .contact{
+    padding: 1px 4rem 3rem 4rem;
+  }
+  
+  .contact .share{
+    margin-bottom: 1rem;
+  }
+  
+  .contact .share a{
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    font-size: 15px;
+  }
+  
+  .contact .share1{
+    margin-bottom: 2rem;
+  }
+  
+  .contact .share1 p{
+    font-size: 7px;
+  }
+
+  .contact .share1 p span{
+    font-size: 10px;
+  }
+
+  .contact .share1 .intouch #icon{
+    margin: 0 8px;
+    cursor: pointer;
+  }
+  
+  .btn2 {
+    border: 1px solid var(--p-color);
+    padding: .3rem .8rem;
+    font-size: 10px;
+  }
+    
+  .footer p{
+    font-size: 8px;
+  }
 }
