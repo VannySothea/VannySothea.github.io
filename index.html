@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanny Sothea</title>
     <!-- logo -->
-    <link rel="icon" href="./Thea_Photos/thea-pf-circle.png">
+    <link rel="icon" href="./Thea_Photos/pf-picture-circle.png">
     <!-- css link -->
     <link rel="stylesheet" href="style.css">
     <!-- font awesome cdn -->
@@ -17,7 +17,7 @@
 <body>
     <!-- heading -->
     <section class="header">
-        <img src="./Thea_Photos/letter-t.png" alt="Letter T logo">
+        <img id="logoToChange" src="./Thea_Photos/t-black.png" alt="Letter T logo">
         <nav>
             <a href="#home">home</a>
             <a href="#aboutme">about me</a>
@@ -25,20 +25,18 @@
             <a href="#project">project</a>
             <a href="#contact">contact</a>
         </nav>
-        <div class="icons">
-            <div onClick="showMessage()" class="fas fa-bars" id="menu-btn"></div>
+        <div>
+            <i class="fa-solid fa-circle-half-stroke" class="toggle" id="toggle"></i>
         </div>
     </section>
     <!-- home -->
     <section class="home">
-
         <div class="content">
-            <h1>I'm a</h1>
+            <h1><span>I'm a</span></h1>
             <h1>DEVELOPER <span>.</span></h1>
-            <br>
             <a href="#aboutme" class="btn">ABOUT ME</a>
         </div>
-        <img src="./Thea_Photos/programmer-png.png" alt="Programmer Logo">
+        <img id="imageToChange" src="./Thea_Photos/programmer-black.png" alt="Programmer Logo">
     </section>
     <!-- about me -->
     <section class="about" id="aboutme">
@@ -99,33 +97,47 @@
     <!-- skills -->
     <section class="skills" id="skills">
         <h1 class="heading">Skills</h1>
-        <div class="container">
-            <div class="box">
-                <div class="bgimage1">
-                    <img src="./Thea_Photos/web-development_icon.png" alt="Web development icon">
+        <div class="frame">
+            <div class="container">
+                <div class="box">
+                    <div class="outer">
+                        <div class="bgimage1">
+                            <img src="./Thea_Photos/web-development_icon.png" alt="Web development icon">
+                        </div>
+                    </div>
+                    <div class="info">
+                        <p class="title">Web Development</p>
+                        <p class="description">Involves building, designing, and maintaining websites or web applications. It
+                        emcompasses tasks like coding, structuring, and ensuring functionality to create a positive user
+                        experience.</p>
+                    </div>
                 </div>
-                <p class="title">Web Development</p>
-                <p class="description">Involves building, designing, and maintaining websites or web applications. It
-                    emcompasses tasks like coding, structuring, and ensuring functionality to create a positive user
-                    experience.</p>
-            </div>
-            <div class="box">
-                <div class="bgimage2">
-                    <img src="./Thea_Photos/graphic-design-icon.png" alt="Graphic design icon">
+                <div class="box">
+                    <div class="outer">
+                        <div class="bgimage2">
+                            <img src="./Thea_Photos/graphic-design-icon.png" alt="Graphic design icon">
+                        </div>
+                    </div>
+                    <div class="info">
+                        <p class="title">Graphic Design</p>
+                        <p class="description">The art of visual communication, using images, typography, and layout to convey
+                        ideas or messages. Graphic designers create visuals for various mediums, such as print, digital, and
+                        social media, to achieve effective and aesthetically pleaseing communication.</p>
+                    </div>
                 </div>
-                <p class="title">Graphic Design</p>
-                <p class="description">The art of visual communication, using images, typography, and layout to convey
-                    ideas or messages. Graphic designers create visuals for various mediums, such as print, digital, and
-                    social media, to achieve effective and aesthetically pleaseing communication.</p>
-            </div>
-            <div class="box">
-                <div class="bgimage3">
-                    <img src="./Thea_Photos/leadership-icon.png" alt="Leadership icon">
+                <div class="box">
+                    <div class="outer">
+                        <div class="bgimage3">
+                            <img src="./Thea_Photos/leadership-icon.png" alt="Leadership icon">
+                        </div>
+                    </div>
+                    <div class="info">
+                        <p class="title">Leadership</p>
+                        <p class="description">I may not have been a leader in a big group yet. But I've shown my leadership through my online teaching platform.</p>
+                    </div>
                 </div>
-                <p class="title">Leadership</p>
-                <p class="description">I may not have been a leader in a big group yet. But I've shown my leadership through my online teaching platform.</p>
             </div>
-
+        </div>
     </section>
 
     <!-- project -->
@@ -184,11 +196,11 @@
 
     <div class="share1">
        <div class="intouch">
-          <p id="icon" class="fa fa-mobile" aria-hidden="true"> </p>
+          <p id="icon" class="fa fa-mobile" aria-hidden="true"></p>
           <p><span>Call Me</span><br>011793795</p>
        </div>
        <div class="intouch">
-          <p id="icon" href="" class="fa fa-envelope" aria-hidden="true"></p>
+          <p id="icon" class="fa fa-envelope" aria-hidden="true"></p>
           <p><span>Email Me</span><br>vannysothea070@gmail.com</p>
        </div>
        <div class="intouch">
@@ -204,7 +216,10 @@
  <section class="footer">
     <p>&copy; 2024 All rights reserved by Vanny Sothea.</p>
  </section>
-
+ 
+    
+ 
+    <script src="https://kit.fontawesome.com/fbfc45beeb.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
 
