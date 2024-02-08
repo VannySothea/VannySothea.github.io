@@ -107,7 +107,7 @@ h1.heading {
     color: var(--nav-color);
 }
 
-.valentine-container{
+.valentine-container {
     height: 100vh;
     font-family: cursive;
     display: flex;
@@ -116,29 +116,29 @@ h1.heading {
     box-sizing: border-box;
 }
 
-.gif-container{
+.gif-container {
     width: 100vw;
     display: flex;
     justify-content: center;
 }
 
-.gif-container img{
+.gif-container img {
     width: 300px;
 }
 
-.text-container p{
+.text-container p {
     font-size: 4vw;
     text-align: center;
 }
 
-.button-container{
+.button-container {
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.button-container button{
+.button-container button {
     font-size: 3.2vw;
     min-width: 10vw;
     min-height: 7.5vw;
@@ -150,11 +150,11 @@ h1.heading {
     padding: 1rem;
 }
 
-button.no{
+button.no {
     background: red;
 }
 
-button.yes{
+button.yes {
     background: rgb(36, 226, 36);
 }
 
@@ -172,6 +172,7 @@ button.yes{
     .header i {
         font-size: 28px;
     }
+
     .header nav a {
         font-size: 15px;
     }
@@ -245,11 +246,11 @@ button.yes{
     }
 
     /* project */
-    .gif-container img{
+    .gif-container img {
         width: 200px;
     }
-    
-    .text-container p{
+
+    .text-container p {
         font-size: 6vw;
     }
 }
@@ -281,5 +282,14 @@ button.yes{
     .header nav a {
         font-size: 6px;
         margin: .2rem;
+    }
+
+    /* project */
+    .gif-container img {
+        width: 200px;
+    }
+
+    .text-container p {
+        font-size: 6vw;
     }
 }

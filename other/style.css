@@ -106,14 +106,15 @@ h1.heading {
 }
 
 /* project */
-.container{
+.container {
     display: flex;
     justify-content: center;
 }
-.container .box-container{
+
+.container .box-container {
     width: 40rem;
     height: 17.5rem;
-    margin: 0 2.5rem;
+    margin: 1rem 2.5rem;
     border-radius: 10px;
     text-align: center;
     display: flex;
@@ -121,28 +122,29 @@ h1.heading {
     align-items: center;
 }
 
-.container .box1{
-  background: rgb(37, 74, 255);
+.container .box1 {
+    background: rgb(37, 74, 255);
 }
 
-.container .box2{
+.container .box2 {
     background: rgb(253, 168, 182);
 }
 
-.container p.title{
+.container p.title {
     color: var(--bg-color);
     font-weight: bolder;
     text-transform: capitalize;
     font-size: 40px;
     font-family: 'Oswald', sans-serif;
 }
-.container p.description{
+
+.container p.description {
     color: var(--bg-color);
     font-weight: bolder;
     font-size: 18px;
 }
 
-.container a{
+.container a {
     font-family: 'Oswald', sans-serif;
     background: var(--bg-color);
     border-radius: 100px;
@@ -150,26 +152,53 @@ h1.heading {
     color: var(--text-color);
     text-decoration: none;
     font-weight: bolder;
+    font-size: 18px;
 }
 
-@media only screen and (min-width: 900px) and (max-width: 1199px) {
-    section {
-        margin: 0 2.5rem;
-    }
 
+
+
+
+
+
+
+
+@media only screen and (min-width: 900px) and (max-width: 1199px) {
     .header i {
         font-size: 28px;
     }
+
     .header nav a {
         font-size: 15px;
     }
-}
-
-@media only screen and (min-width: 600px) and (max-width: 899px) {
-    section {
-        margin: 0 1rem;
+    /* project */
+    .container .box-container {
+        width: 40rem;
+        height: 17.5rem;
+        margin: 1rem 1rem;
     }
 
+    .container p.title {
+        font-size: 27px;
+    }
+
+    .container p.description {
+        font-size: 16px;
+    }
+
+    .container a {
+        padding: .25rem 4rem;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+@media only screen and (min-width: 600px) and (max-width: 899px) 
+{
     h1.heading {
         margin-top: 1rem;
         font-size: 1.5rem;
@@ -197,13 +226,40 @@ h1.heading {
     .header .icons {
         font-size: 1.5rem;
     }
-}
 
-@media only screen and (min-width: 320px) and (max-width: 599px) {
-    section {
-        margin: 0 1rem;
+    /* project */
+    .container {
+        display: block;
     }
 
+    .container .box-container {
+        width: 100%;
+        height: 10rem;
+        margin: 1rem 0;
+    }
+
+    .container p.title {
+        font-size: 27px;
+    }
+
+    .container p.description {
+        font-size: 16px;
+    }
+
+    .container a {
+        padding: .25rem 4rem;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 599px) 
+{
     h1.heading {
         margin-top: 2rem;
         font-size: 1.5rem;
@@ -231,12 +287,35 @@ h1.heading {
     .header .icons {
         font-size: 14px;
     }
+
+    /* project */
+    .container {
+        display: block;
+    }
+
+    .container .box-container {
+        width: 100%;
+        height: 10rem;
+        margin: 1rem 0;
+    }
+
+    .container p.title {
+        font-size: 17px;
+    }
+
+    .container p.description {
+        font-size: 10px;
+    }
+
+    .container a {
+        padding: .25rem 2rem;
+        font-size: 8px;
+    }
+
 }
 
-@media only screen and (max-width: 319px) {
-    section {
-        margin: 0 1rem;
-    }
+@media only screen and (max-width: 319px) 
+{
 
     h1.heading {
         margin-top: 2rem;
@@ -260,5 +339,29 @@ h1.heading {
     .header nav a {
         font-size: 6px;
         margin: .2rem;
+    }
+
+    /* project */
+    .container {
+        display: block;
+    }
+
+    .container .box-container {
+        width: 100%;
+        height: 10rem;
+        margin: 1rem 0;
+    }
+
+    .container p.title {
+        font-size: 17px;
+    }
+
+    .container p.description {
+        font-size: 10px;
+    }
+
+    .container a {
+        padding: .25rem 2rem;
+        font-size: 8px;
     }
 }
